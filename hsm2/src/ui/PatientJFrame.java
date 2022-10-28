@@ -5,6 +5,8 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.Patient;
+import model.PatientHistory;
 
 /**
  *
@@ -15,8 +17,15 @@ public class PatientJFrame extends javax.swing.JFrame {
     /**
      * Creates new form PatientJFrame
      */
+    
+    PatientHistory patienthistory;
+    
     public PatientJFrame() {
         initComponents();
+        
+        patienthistory = new PatientHistory();
+        
+        
     }
 
     /**
@@ -51,9 +60,13 @@ public class PatientJFrame extends javax.swing.JFrame {
         ComboBoxDoctor = new javax.swing.JComboBox<>();
         lblTime = new javax.swing.JLabel();
         ComboBoxTime = new javax.swing.JComboBox<>();
-        btnCancel = new javax.swing.JButton();
         txtEncounterNo = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        txtchooseDoctor = new javax.swing.JTextField();
+        btngoBack = new javax.swing.JButton();
+        txtTime = new javax.swing.JTextField();
+        txtBloodGroup = new javax.swing.JTextField();
+        txtGender = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,8 +115,18 @@ public class PatientJFrame extends javax.swing.JFrame {
         });
 
         ComboBoxGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female", "Others" }));
+        ComboBoxGender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxGenderActionPerformed(evt);
+            }
+        });
 
         ComboBoxBloodGroup.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Blood Group", "A+", "O+", "B+", "AB+", "A-", "O-", "B-", "AB-" }));
+        ComboBoxBloodGroup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxBloodGroupActionPerformed(evt);
+            }
+        });
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -124,15 +147,32 @@ public class PatientJFrame extends javax.swing.JFrame {
         lblTime.setText("Select Time :");
 
         ComboBoxTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Time", "9:00 am", "10:00 am", "11:00 am", "12:00 pm", "1:00 pm", "2:00 pm", "3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm" }));
-
-        btnCancel.setText("Cancel");
-        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+        ComboBoxTime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelActionPerformed(evt);
+                ComboBoxTimeActionPerformed(evt);
             }
         });
 
         jLabel1.setText("PATIENT FORM");
+
+        btngoBack.setText("Cancel");
+        btngoBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngoBackActionPerformed(evt);
+            }
+        });
+
+        txtTime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTimeActionPerformed(evt);
+            }
+        });
+
+        txtBloodGroup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBloodGroupActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout BottomPanelLayout = new javax.swing.GroupLayout(BottomPanel);
         BottomPanel.setLayout(BottomPanelLayout);
@@ -150,40 +190,54 @@ public class PatientJFrame extends javax.swing.JFrame {
                     .addComponent(lblAddress))
                 .addGap(12, 12, 12)
                 .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ComboBoxBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(txtPhoneNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPatientName, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPatientId, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addComponent(ComboBoxGender, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDate, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
-                        .addComponent(lblEncounterNo)
-                        .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
-                        .addComponent(lblDoctor)
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
-                        .addComponent(lblTime)
-                        .addGap(33, 33, 33)))
-                .addGap(12, 12, 12)
-                .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(ComboBoxDoctor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtEncounterNo))
                     .addGroup(BottomPanelLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(btnCancel)
+                        .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                .addComponent(txtPhoneNumber, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtPatientName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtPatientId, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BottomPanelLayout.createSequentialGroup()
+                                .addComponent(ComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDate, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
+                                .addComponent(lblEncounterNo)
+                                .addGap(24, 24, 24))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
+                                .addComponent(lblDoctor)
+                                .addGap(22, 22, 22))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
+                                .addComponent(lblTime)
+                                .addGap(33, 33, 33)))
+                        .addGap(12, 12, 12))
+                    .addGroup(BottomPanelLayout.createSequentialGroup()
+                        .addComponent(ComboBoxBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BottomPanelLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(btngoBack)
                         .addGap(18, 18, 18)
                         .addComponent(btnSave))
-                    .addComponent(ComboBoxTime, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61))
+                    .addGroup(BottomPanelLayout.createSequentialGroup()
+                        .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ComboBoxDoctor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(DateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtEncounterNo))
+                        .addGap(18, 18, 18)
+                        .addComponent(txtchooseDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(BottomPanelLayout.createSequentialGroup()
+                        .addComponent(ComboBoxTime, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -211,7 +265,8 @@ public class PatientJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblGender)
-                            .addComponent(ComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(ComboBoxGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(BottomPanelLayout.createSequentialGroup()
                         .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(BottomPanelLayout.createSequentialGroup()
@@ -224,11 +279,14 @@ public class PatientJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblDoctor)
-                            .addComponent(ComboBoxDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(ComboBoxDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtchooseDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblTime)
-                            .addComponent(ComboBoxTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(ComboBoxTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPhoneNumber)
@@ -242,12 +300,13 @@ public class PatientJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblBloodGroup)
-                            .addComponent(ComboBoxBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ComboBoxBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(61, 61, 61))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
                         .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCancel)
-                            .addComponent(btnSave))
+                            .addComponent(btnSave)
+                            .addComponent(btngoBack))
                         .addGap(82, 82, 82))))
         );
 
@@ -287,14 +346,14 @@ public class PatientJFrame extends javax.swing.JFrame {
         int PatientId = Integer.parseInt(txtPatientId.getText());
         String PatientName = txtPatientName.getText();
         int Age = Integer.parseInt(txtAge.getText());
-        //String Gender = ComboBoxGender.;
+        //String gender = txtGender;
         String PhoneNumber = txtPhoneNumber.getText();
         String Address = txtAddress.getText();
-        //String BloodGroup = txtPatientName.getText();
+        String BloodGroup = txtBloodGroup.getText();
         //String Date = txtDate
         String Encounter = txtEncounterNo.getText();
-        //string choosedoc
-        //string time
+        String chooseDoctor = txtchooseDoctor.getText();
+        String chooseTime = txtTime.getText();
 
         Patient pm = patienthistory.addNewPatient();
 
@@ -305,39 +364,73 @@ public class PatientJFrame extends javax.swing.JFrame {
         pm.setPhoneNumber(PhoneNumber);
         pm.setAddress(Address);
         pm.setBloodGroup(Address);
-        pm.setDateOfAppointment(Encounter);
+        //pm.setDateOfAppointment(Encounter);
         pm.setEncounter(Encounter);
         pm.setChooseDoctor(PhoneNumber);
-        pm.setSelectTime(PatientName);
+        //pm.setSelectTime(PatientName);
 
         JOptionPane.showMessageDialog(this, "saved");
 
         txtPatientId.setText("");
         txtPatientName.setText("");
         txtAge.setText("");
-        //ComboBoxGender.setText("");
+        txtGender.setText("");
         txtPhoneNumber.setText("");
         txtAddress.setText("");
-        //ComboBoxBloodGroup.setText("");
+        txtBloodGroup.setText("");
         txtEncounterNo.setText("");
         //DateChooser.setText("");
-        //ComboBoxDoctor.setText("");
-        //ComboBoxTime.setText("");
+        txtchooseDoctor.setText("");
+        txtTime.setText("");
 
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void ComboBoxDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxDoctorActionPerformed
         // TODO add your handling code here:
+            if(ComboBoxDoctor.getSelectedItem() != null){ 
+            String chooseDoctor = ComboBoxDoctor.getSelectedItem().toString();
+            txtchooseDoctor.setText(chooseDoctor);
     }//GEN-LAST:event_ComboBoxDoctorActionPerformed
-
-    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+    }
+    
+    private void btngoBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngoBackActionPerformed
         // TODO add your handling code here:
         Login home = new Login();
         home.setVisible(true);
         dispose();
+    }//GEN-LAST:event_btngoBackActionPerformed
 
-    }//GEN-LAST:event_btnCancelActionPerformed
+    private void txtTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTimeActionPerformed
 
+    private void ComboBoxTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxTimeActionPerformed
+        // TODO add your handling code here:
+        if(ComboBoxTime.getSelectedItem() != null){ 
+            String chooseTime = ComboBoxTime.getSelectedItem().toString();
+            txtTime.setText(chooseTime);
+    }//GEN-LAST:event_ComboBoxTimeActionPerformed
+    }
+    
+    private void txtBloodGroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBloodGroupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBloodGroupActionPerformed
+
+    private void ComboBoxBloodGroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxBloodGroupActionPerformed
+        // TODO add your handling code here:
+        if(ComboBoxBloodGroup.getSelectedItem() != null){ 
+            String bloodGroup = ComboBoxBloodGroup.getSelectedItem().toString();
+            txtBloodGroup.setText(bloodGroup);
+    }//GEN-LAST:event_ComboBoxBloodGroupActionPerformed
+    }
+    
+    private void ComboBoxGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxGenderActionPerformed
+        // TODO add your handling code here:
+        if(ComboBoxGender.getSelectedItem() != null){ 
+            String gender = ComboBoxGender.getSelectedItem().toString();
+            txtGender.setText(gender);
+    }//GEN-LAST:event_ComboBoxGenderActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
@@ -380,8 +473,8 @@ public class PatientJFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboBoxGender;
     private javax.swing.JComboBox<String> ComboBoxTime;
     private com.toedter.calendar.JDateChooser DateChooser;
-    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnSave;
+    private javax.swing.JButton btngoBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAge;
@@ -396,9 +489,13 @@ public class PatientJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblTime;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtBloodGroup;
     private javax.swing.JTextField txtEncounterNo;
+    private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtPatientId;
     private javax.swing.JTextField txtPatientName;
     private javax.swing.JTextField txtPhoneNumber;
+    private javax.swing.JTextField txtTime;
+    private javax.swing.JTextField txtchooseDoctor;
     // End of variables declaration//GEN-END:variables
 }

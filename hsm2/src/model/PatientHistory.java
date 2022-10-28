@@ -4,10 +4,29 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author doshi
  */
 public class PatientHistory {
+    
+    private ArrayList<PatientHistory> patienthistory;
+    
+    public PatientHistory(){
+        this.patienthistory = new ArrayList <PatientHistory>();
+    }
+
+    public ArrayList<PatientHistory> getPatienthistory() {
+        return patienthistory;
+    }
+
+    public void setPatienthistory(ArrayList<PatientHistory> patienthistory) {
+        this.patienthistory = patienthistory;
+    }
+    
+    
+    
     
 }
