@@ -4,10 +4,76 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author doshi
  */
 public class Encounter {
+    private String encounterId;
+    
+    private Doctor doctor;
+    private Patient patient;
+    
+    
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+    
+    
+    private VitalSigns vitalSign;
+    private String date;
+
+    public String getEncounterId() {
+        return encounterId;
+    }
+
+    public void setEncounterId(String encounterId) {
+        this.encounterId = encounterId;
+    }
+
+    
+
+    
+
+    public VitalSigns getVitalSign() {
+        return vitalSign;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    
+
+    public void setVitalSign(VitalSigns vitalSign) {
+        this.vitalSign = vitalSign;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+    
+    @Override
+    public String toString() {
+        return this.encounterId;
+    }
+    
+    
+    
     
 }

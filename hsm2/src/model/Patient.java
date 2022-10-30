@@ -8,106 +8,87 @@ package model;
  *
  * @author doshi
  */
-public class Patient {
-    private int patientId;
-    private String patientName;
-    private int patientAge;
-    private String gender;
-    private String phoneNumber;
-    private String address;
-    private String bloodGroup;
-    private String dateOfBirth;
-    private String encounter;
-    private String chooseDoctor;
-    private String chooseTime;
+public class Patient extends Person {
+    
+    private String patientId;
+    
+    private double heightIncms;
+    private double weightInKgs;
+    private EncounterHistory patientEncounterHistory;
+    private String allergies;
+    private String username;
+    private String password;
 
-    public int getPatientId() {
+    public String getAllergies() {
+        return allergies;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
+
+    public String getPatientId() {
         return patientId;
     }
 
-    public void setPatientId(int patientId) {
+    public double getHeightIncms() {
+        return heightIncms;
+    }
+
+    public double getWeightInKgs() {
+        return weightInKgs;
+    }
+
+    public EncounterHistory getPatientEncounterHistory() {
+        return patientEncounterHistory;
+    }
+
+    public String getReasontoVisit() {
+        return allergies;
+    }
+    
+    
+    public void setPatientId(String patientId) {
         this.patientId = patientId;
     }
 
-    public String getPatientName() {
-        return patientName;
+    public void setHeightIncms(double heightIncms) {
+        this.heightIncms = heightIncms;
     }
 
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
+    public void setWeightInKgs(double weightInKgs) {
+        this.weightInKgs = weightInKgs;
     }
 
-    public int getPatientAge() {
-        return patientAge;
+    public void setPatientEncounterHistory(EncounterHistory patientEncounterHistory) {
+        this.patientEncounterHistory = patientEncounterHistory;
     }
 
-    public void setPatientAge(int patientAge) {
-        this.patientAge = patientAge;
+    public void setAllergies(String allergies) {
+        this.allergies= allergies;
     }
-
-    public String getGender() {
-        return gender;
+    
+    @Override
+    public String toString() {
+        return this.getName();
     }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getEncounter() {
-        return encounter;
-    }
-
-    public void setEncounter(String encounter) {
-        this.encounter = encounter;
-    }
-
-    public String getChooseDoctor() {
-        return chooseDoctor;
-    }
-
-    public void setChooseDoctor(String chooseDoctor) {
-        this.chooseDoctor = chooseDoctor;
-    }
-
-    public String getChooseTime() {
-        return chooseTime;
-    }
-
-    public void setChooseTime(String chooseTime) {
-        this.chooseTime = chooseTime;
-    }
+    
+    
+    
     
     
     
