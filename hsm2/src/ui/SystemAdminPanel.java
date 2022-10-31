@@ -104,6 +104,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         setLayout(new java.awt.CardLayout());
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("System Admin Login");
 
         jLabel2.setText("Username");
@@ -122,30 +123,26 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         hospitalAdminLoginPanelLayout.setHorizontalGroup(
             hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(226, 226, 226)
+                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSystemAdminLogin)
+                    .addComponent(jLabel1)
                     .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(226, 226, 226)
                         .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
                         .addGap(40, 40, 40)
                         .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtSystemAdminUsername)
-                            .addComponent(txtSystemAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(285, 285, 285)
-                        .addComponent(btnSystemAdminLogin))
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(284, 284, 284)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtSystemAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))))
+                .addGap(516, 516, 516))
         );
         hospitalAdminLoginPanelLayout.setVerticalGroup(
             hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(112, 112, 112)
                 .addComponent(jLabel1)
-                .addGap(98, 98, 98)
+                .addGap(57, 57, 57)
                 .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(txtSystemAdminUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,9 +150,9 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
                     .addComponent(txtSystemAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                .addGap(42, 42, 42)
                 .addComponent(btnSystemAdminLogin)
-                .addContainerGap(359, Short.MAX_VALUE))
+                .addGap(360, 360, 360))
         );
 
         add(hospitalAdminLoginPanel, "hospitalAdminLoginPanel");

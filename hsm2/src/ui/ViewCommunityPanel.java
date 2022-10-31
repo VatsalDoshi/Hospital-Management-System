@@ -55,6 +55,7 @@ public class ViewCommunityPanel extends javax.swing.JPanel {
         txtSearchCommunity = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("View Community");
 
         tblCommunities.setModel(new javax.swing.table.DefaultTableModel(
@@ -94,6 +95,12 @@ public class ViewCommunityPanel extends javax.swing.JPanel {
         lblCommunityName.setText("Community Name");
 
         lblCommunityCity.setText("Community City");
+
+        txtCommunityName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCommunityNameActionPerformed(evt);
+            }
+        });
 
         lblCommunityId.setText("Community Id");
 
@@ -172,7 +179,7 @@ public class ViewCommunityPanel extends javax.swing.JPanel {
                     .addComponent(jComboBoxCities, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addComponent(btnSaveCommunity)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -231,7 +238,7 @@ public class ViewCommunityPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblCommunities.getModel();
         Community c = (Community) model.getValueAt(selectedrowIndex, 1);
         txtCommunityId.setText(String.valueOf(c.getCommunityId()));
-        txtCommunityId.setEditable(false);
+        txtCommunityId.setEditable(true);
         txtCommunityName.setText(String.valueOf(c.getCommunityName()));
         txtCommunityName.setEditable(true);
         jComboBoxCities.setSelectedItem(c.getCity());
@@ -245,6 +252,10 @@ public class ViewCommunityPanel extends javax.swing.JPanel {
         tblCommunities.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(txtSearchCommunity.getText().trim()));
     }//GEN-LAST:event_txtSearchCommunityKeyPressed
+
+    private void txtCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCommunityNameActionPerformed
 
     private void populateTable() {
        

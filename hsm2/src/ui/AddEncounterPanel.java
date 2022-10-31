@@ -52,6 +52,7 @@ public class AddEncounterPanel extends javax.swing.JPanel {
         btnAddEncounter = new javax.swing.JButton();
         txtEncounterDate = new javax.swing.JTextField();
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Add Encounter");
 
         jLabel2.setText("Doctor");
@@ -95,9 +96,9 @@ public class AddEncounterPanel extends javax.swing.JPanel {
                             .addComponent(jComboBoxPatient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtEncounterDate)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
+                        .addGap(338, 338, 338)
                         .addComponent(btnAddEncounter)))
-                .addContainerGap(336, Short.MAX_VALUE))
+                .addGap(336, 336, 336))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,9 +118,9 @@ public class AddEncounterPanel extends javax.swing.JPanel {
                         .addGap(59, 59, 59)
                         .addComponent(jLabel4))
                     .addComponent(txtEncounterDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84)
+                .addGap(71, 71, 71)
                 .addComponent(btnAddEncounter)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addGap(353, 353, 353))
         );
     }// </editor-fold>//GEN-END:initComponents
 

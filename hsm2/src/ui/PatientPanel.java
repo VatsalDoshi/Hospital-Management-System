@@ -56,6 +56,7 @@ public class PatientPanel extends javax.swing.JPanel {
 
         setLayout(new java.awt.CardLayout());
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setText("Patient Login");
 
         jLabel3.setText("Username");
@@ -79,18 +80,17 @@ public class PatientPanel extends javax.swing.JPanel {
                     .addGroup(PatientLoginPanelLayout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addComponent(jLabel2))
-                    .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(40, 40, 40)
-                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtPatientUsername)
-                            .addComponent(txtPatientPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(btnDoctorLogin)))
-                .addContainerGap(333, Short.MAX_VALUE))
+                    .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnDoctorLogin)
+                        .addGroup(PatientLoginPanelLayout.createSequentialGroup()
+                            .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel4))
+                            .addGap(40, 40, 40)
+                            .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtPatientUsername)
+                                .addComponent(txtPatientPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(326, 326, 326))
         );
         PatientLoginPanelLayout.setVerticalGroup(
             PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,9 +105,9 @@ public class PatientPanel extends javax.swing.JPanel {
                 .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
                     .addComponent(txtPatientPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                .addGap(34, 34, 34)
                 .addComponent(btnDoctorLogin)
-                .addContainerGap(371, Short.MAX_VALUE))
+                .addGap(358, 358, 358))
         );
 
         add(PatientLoginPanel, "PatientLoginPanel");
@@ -166,7 +166,7 @@ public class PatientPanel extends javax.swing.JPanel {
                     .addComponent(btncheckEncounters)
                     .addComponent(btnCheckDetails)
                     .addComponent(btnBookAppointment))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSplitPanePatientPanel.setTopComponent(controlPanelPatientHome);
@@ -175,7 +175,7 @@ public class PatientPanel extends javax.swing.JPanel {
         viewPanelPatientHome.setLayout(viewPanelPatientHomeLayout);
         viewPanelPatientHomeLayout.setHorizontalGroup(
             viewPanelPatientHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 873, Short.MAX_VALUE)
+            .addGap(0, 956, Short.MAX_VALUE)
         );
         viewPanelPatientHomeLayout.setVerticalGroup(
             viewPanelPatientHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

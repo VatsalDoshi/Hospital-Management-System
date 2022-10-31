@@ -48,6 +48,7 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
         jComboBoxPatient = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Add Encounter");
 
         btnAddEncounter.setText("Add Encounter");
@@ -80,16 +81,16 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
                             .addComponent(jComboBoxPatient, 0, 293, Short.MAX_VALUE)
                             .addComponent(txtEncounterDate)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
+                        .addGap(346, 346, 346)
                         .addComponent(btnAddEncounter)))
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addGap(306, 306, 306))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jLabel1)
-                .addGap(126, 126, 126)
+                .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -98,9 +99,9 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
                         .addGap(59, 59, 59)
                         .addComponent(jLabel4))
                     .addComponent(txtEncounterDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84)
+                .addGap(52, 52, 52)
                 .addComponent(btnAddEncounter)
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addGap(379, 379, 379))
         );
     }// </editor-fold>//GEN-END:initComponents
 

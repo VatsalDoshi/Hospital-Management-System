@@ -60,6 +60,7 @@ public class ViewCityPanelSystemAdmin extends javax.swing.JPanel {
         txtSearchCity = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("View City ");
 
         tblCities.setModel(new javax.swing.table.DefaultTableModel(
@@ -156,7 +157,7 @@ public class ViewCityPanelSystemAdmin extends javax.swing.JPanel {
                                         .addComponent(txtCityState, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                         .addComponent(txtCityId)
                                         .addComponent(txtSearchCity)))))))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addGap(95, 95, 95))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +205,7 @@ public class ViewCityPanelSystemAdmin extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 759, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)

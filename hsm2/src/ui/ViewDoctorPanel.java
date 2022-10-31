@@ -79,6 +79,7 @@ public class ViewDoctorPanel extends javax.swing.JPanel {
         lblSearchDoctor = new javax.swing.JLabel();
         txtSearchDoctor = new javax.swing.JTextField();
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("View Doctors");
 
         tblDoctors.setModel(new javax.swing.table.DefaultTableModel(

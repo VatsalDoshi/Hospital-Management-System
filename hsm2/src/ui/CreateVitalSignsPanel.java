@@ -54,6 +54,7 @@ public class CreateVitalSignsPanel extends javax.swing.JPanel {
         txtRespirationRate = new javax.swing.JTextField();
         btnSaveVitalSign = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Create Vital Signs");
 
         jLabel2.setText("Patient");
@@ -78,12 +79,11 @@ public class CreateVitalSignsPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(242, 242, 242)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSaveVitalSign)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(385, 385, 385)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(242, 242, 242)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel3)
@@ -98,18 +98,15 @@ public class CreateVitalSignsPanel extends javax.swing.JPanel {
                             .addComponent(txtBloodPressure)
                             .addComponent(txtTemperature)
                             .addComponent(txtPulseRate)
-                            .addComponent(txtRespirationRate)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(318, 318, 318)
-                        .addComponent(btnSaveVitalSign)))
-                .addContainerGap(374, Short.MAX_VALUE))
+                            .addComponent(txtRespirationRate))))
+                .addGap(374, 374, 374))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel1)
-                .addGap(56, 56, 56)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -129,9 +126,9 @@ public class CreateVitalSignsPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6)
                     .addComponent(txtRespirationRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
+                .addGap(45, 45, 45)
                 .addComponent(btnSaveVitalSign)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addGap(265, 265, 265))
         );
     }// </editor-fold>//GEN-END:initComponents
 
