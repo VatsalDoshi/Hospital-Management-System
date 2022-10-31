@@ -74,15 +74,15 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(110, 110, 110)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBoxPatient, 0, 293, Short.MAX_VALUE)
-                            .addComponent(txtEncounterDate)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(346, 346, 346)
-                        .addComponent(btnAddEncounter)))
+                            .addComponent(btnAddEncounter)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBoxPatient, 0, 293, Short.MAX_VALUE)
+                                    .addComponent(txtEncounterDate))))))
                 .addGap(306, 306, 306))
         );
         layout.setVerticalGroup(
@@ -99,9 +99,9 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
                         .addGap(59, 59, 59)
                         .addComponent(jLabel4))
                     .addComponent(txtEncounterDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
+                .addGap(45, 45, 45)
                 .addComponent(btnAddEncounter)
-                .addGap(379, 379, 379))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
