@@ -56,6 +56,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         btnPatientDirectory = new javax.swing.JButton();
         btnEncountersDirectory = new javax.swing.JButton();
         btnCityDirectory = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         viewPanelSystemAdmin = new javax.swing.JPanel();
         cityDirectoryPanel = new javax.swing.JPanel();
         splitPaneCityDirectory = new javax.swing.JSplitPane();
@@ -87,6 +89,18 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         btnAddEncounter = new javax.swing.JButton();
         btnViewEncounter = new javax.swing.JButton();
         viewPanelEncountersDirectory = new javax.swing.JPanel();
+        communityDirectoryPanel = new javax.swing.JPanel();
+        splitPaneCommunityDirectory = new javax.swing.JSplitPane();
+        controlPanelCommunityDirectroy = new javax.swing.JPanel();
+        btnCreateCommunity = new javax.swing.JButton();
+        btnViewCommunity = new javax.swing.JButton();
+        ViewPanelCommunityDirectory = new javax.swing.JPanel();
+        houseDirectoryPanel = new javax.swing.JPanel();
+        splitPaneHouseDirectory = new javax.swing.JSplitPane();
+        controlPanelHouseDirectory = new javax.swing.JPanel();
+        btnCreateHouse = new javax.swing.JButton();
+        btnViewHouse = new javax.swing.JButton();
+        viewPanelHouseDirectory = new javax.swing.JPanel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -183,35 +197,58 @@ public class SystemAdminPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText("Community Directory");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("House Directory");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlPanelSystemAdminLayout = new javax.swing.GroupLayout(controlPanelSystemAdmin);
         controlPanelSystemAdmin.setLayout(controlPanelSystemAdminLayout);
         controlPanelSystemAdminLayout.setHorizontalGroup(
             controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelSystemAdminLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
                 .addGroup(controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCityDirectory)
                     .addGroup(controlPanelSystemAdminLayout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(btnCityDirectory)
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton1)
+                        .addGap(37, 37, 37)
                         .addComponent(btnHospitlaDirectory)
-                        .addGap(52, 52, 52)
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton2))
+                    .addGroup(controlPanelSystemAdminLayout.createSequentialGroup()
+                        .addGap(206, 206, 206)
                         .addComponent(btnDoctorsDirectory)
-                        .addGap(39, 39, 39)
+                        .addGap(59, 59, 59)
                         .addComponent(btnPatientDirectory)
-                        .addGap(34, 34, 34)
+                        .addGap(44, 44, 44)
                         .addComponent(btnEncountersDirectory)))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controlPanelSystemAdminLayout.setVerticalGroup(
             controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelSystemAdminLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCityDirectory)
+                    .addComponent(jButton1)
                     .addComponent(btnHospitlaDirectory)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDoctorsDirectory)
                     .addComponent(btnPatientDirectory)
-                    .addComponent(btnEncountersDirectory))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCityDirectory))
+                    .addComponent(btnEncountersDirectory)))
         );
 
         jSplitPaneHospitalAdmin.setTopComponent(controlPanelSystemAdmin);
@@ -262,7 +299,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelCityDirectory.setLayout(viewPanelCityDirectoryLayout);
         viewPanelCityDirectoryLayout.setHorizontalGroup(
             viewPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 759, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         viewPanelCityDirectoryLayout.setVerticalGroup(
             viewPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,7 +366,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelHospitalDirectory.setLayout(viewPanelHospitalDirectoryLayout);
         viewPanelHospitalDirectoryLayout.setHorizontalGroup(
             viewPanelHospitalDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 727, Short.MAX_VALUE)
+            .addGap(0, 832, Short.MAX_VALUE)
         );
         viewPanelHospitalDirectoryLayout.setVerticalGroup(
             viewPanelHospitalDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -394,7 +431,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelDoctorsDirectory.setLayout(viewPanelDoctorsDirectoryLayout);
         viewPanelDoctorsDirectoryLayout.setHorizontalGroup(
             viewPanelDoctorsDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 737, Short.MAX_VALUE)
+            .addGap(0, 842, Short.MAX_VALUE)
         );
         viewPanelDoctorsDirectoryLayout.setVerticalGroup(
             viewPanelDoctorsDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -462,7 +499,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelPatientDirectroy.setLayout(viewPanelPatientDirectroyLayout);
         viewPanelPatientDirectroyLayout.setHorizontalGroup(
             viewPanelPatientDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 743, Short.MAX_VALUE)
+            .addGap(0, 848, Short.MAX_VALUE)
         );
         viewPanelPatientDirectroyLayout.setVerticalGroup(
             viewPanelPatientDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -530,7 +567,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelEncountersDirectory.setLayout(viewPanelEncountersDirectoryLayout);
         viewPanelEncountersDirectoryLayout.setHorizontalGroup(
             viewPanelEncountersDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         viewPanelEncountersDirectoryLayout.setVerticalGroup(
             viewPanelEncountersDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -551,6 +588,141 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         );
 
         viewPanelSystemAdmin.add(EncounterDirectoryPanel, "EncounterDirectoryPanel");
+
+        btnCreateCommunity.setText("Create Community");
+        btnCreateCommunity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateCommunityActionPerformed(evt);
+            }
+        });
+
+        btnViewCommunity.setText("View Community");
+        btnViewCommunity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewCommunityActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout controlPanelCommunityDirectroyLayout = new javax.swing.GroupLayout(controlPanelCommunityDirectroy);
+        controlPanelCommunityDirectroy.setLayout(controlPanelCommunityDirectroyLayout);
+        controlPanelCommunityDirectroyLayout.setHorizontalGroup(
+            controlPanelCommunityDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                .addGroup(controlPanelCommunityDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnCreateCommunity))
+                    .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(btnViewCommunity)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        controlPanelCommunityDirectroyLayout.setVerticalGroup(
+            controlPanelCommunityDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(btnCreateCommunity)
+                .addGap(52, 52, 52)
+                .addComponent(btnViewCommunity)
+                .addContainerGap(372, Short.MAX_VALUE))
+        );
+
+        splitPaneCommunityDirectory.setLeftComponent(controlPanelCommunityDirectroy);
+
+        javax.swing.GroupLayout ViewPanelCommunityDirectoryLayout = new javax.swing.GroupLayout(ViewPanelCommunityDirectory);
+        ViewPanelCommunityDirectory.setLayout(ViewPanelCommunityDirectoryLayout);
+        ViewPanelCommunityDirectoryLayout.setHorizontalGroup(
+            ViewPanelCommunityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 816, Short.MAX_VALUE)
+        );
+        ViewPanelCommunityDirectoryLayout.setVerticalGroup(
+            ViewPanelCommunityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
+
+        splitPaneCommunityDirectory.setRightComponent(ViewPanelCommunityDirectory);
+
+        javax.swing.GroupLayout communityDirectoryPanelLayout = new javax.swing.GroupLayout(communityDirectoryPanel);
+        communityDirectoryPanel.setLayout(communityDirectoryPanelLayout);
+        communityDirectoryPanelLayout.setHorizontalGroup(
+            communityDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPaneCommunityDirectory)
+        );
+        communityDirectoryPanelLayout.setVerticalGroup(
+            communityDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPaneCommunityDirectory)
+        );
+
+        viewPanelSystemAdmin.add(communityDirectoryPanel, "communityDirectoryPanel");
+
+        btnCreateHouse.setText("Create House");
+        btnCreateHouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateHouseActionPerformed(evt);
+            }
+        });
+
+        btnViewHouse.setText("View House");
+        btnViewHouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewHouseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout controlPanelHouseDirectoryLayout = new javax.swing.GroupLayout(controlPanelHouseDirectory);
+        controlPanelHouseDirectory.setLayout(controlPanelHouseDirectoryLayout);
+        controlPanelHouseDirectoryLayout.setHorizontalGroup(
+            controlPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelHouseDirectoryLayout.createSequentialGroup()
+                .addComponent(btnCreateHouse)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(controlPanelHouseDirectoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnViewHouse)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        controlPanelHouseDirectoryLayout.setVerticalGroup(
+            controlPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelHouseDirectoryLayout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(btnCreateHouse)
+                .addGap(61, 61, 61)
+                .addComponent(btnViewHouse)
+                .addContainerGap(363, Short.MAX_VALUE))
+        );
+
+        splitPaneHouseDirectory.setLeftComponent(controlPanelHouseDirectory);
+
+        javax.swing.GroupLayout viewPanelHouseDirectoryLayout = new javax.swing.GroupLayout(viewPanelHouseDirectory);
+        viewPanelHouseDirectory.setLayout(viewPanelHouseDirectoryLayout);
+        viewPanelHouseDirectoryLayout.setHorizontalGroup(
+            viewPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 747, Short.MAX_VALUE)
+        );
+        viewPanelHouseDirectoryLayout.setVerticalGroup(
+            viewPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 642, Short.MAX_VALUE)
+        );
+
+        splitPaneHouseDirectory.setRightComponent(viewPanelHouseDirectory);
+
+        javax.swing.GroupLayout houseDirectoryPanelLayout = new javax.swing.GroupLayout(houseDirectoryPanel);
+        houseDirectoryPanel.setLayout(houseDirectoryPanelLayout);
+        houseDirectoryPanelLayout.setHorizontalGroup(
+            houseDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(houseDirectoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneHouseDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, 881, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        houseDirectoryPanelLayout.setVerticalGroup(
+            houseDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(houseDirectoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneHouseDirectory))
+        );
+
+        viewPanelSystemAdmin.add(houseDirectoryPanel, "houseDirectoryPanel");
 
         jSplitPaneHospitalAdmin.setRightComponent(viewPanelSystemAdmin);
 
@@ -576,8 +748,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
             cardLayoutmain.show(this, "jSplitPaneHospitalAdmin");
         }
         else{
-            JOptionPane.showMessageDialog(this, "Enter Valid Username and password");
-            return;
+           JOptionPane.showMessageDialog(this, "Enter Valid Username and password");
+           return;
         }
     }//GEN-LAST:event_btnSystemAdminLoginActionPerformed
 
@@ -664,39 +836,84 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
     private void btnCityDirectoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCityDirectoryActionPerformed
         // TODO add your handling code here:
-        cardLayoutCommunityAdmin.show(viewPanelCommunityAdmin, "cityDirectoryPanel");
+        cardLayoutSystemAdmin.show(viewPanelSystemAdmin, "cityDirectoryPanel");
     }//GEN-LAST:event_btnCityDirectoryActionPerformed
+
+    private void btnCreateCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCommunityActionPerformed
+        // TODO add your handling code here:
+        CreateCommunityPanel createCommunity = new CreateCommunityPanel(sysAdmin);
+        splitPaneCommunityDirectory.setRightComponent(createCommunity);
+    }//GEN-LAST:event_btnCreateCommunityActionPerformed
+
+    private void btnViewCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewCommunityActionPerformed
+        // TODO add your handling code here:
+        ViewCommunityPanel viewCommunity = new ViewCommunityPanel(sysAdmin);
+        splitPaneCommunityDirectory.setRightComponent(viewCommunity);
+    }//GEN-LAST:event_btnViewCommunityActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        cardLayoutSystemAdmin.show(viewPanelSystemAdmin, "communityDirectoryPanel");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnCreateHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateHouseActionPerformed
+        // TODO add your handling code here:
+        CreateHousePanel house = new CreateHousePanel(sysAdmin);
+        splitPaneHouseDirectory.setRightComponent(house);
+    }//GEN-LAST:event_btnCreateHouseActionPerformed
+
+    private void btnViewHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHouseActionPerformed
+        // TODO add your handling code here:
+        ViewHousePanel house = new ViewHousePanel(sysAdmin);
+        splitPaneHouseDirectory.setRightComponent(house);
+    }//GEN-LAST:event_btnViewHouseActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        cardLayoutSystemAdmin.show(viewPanelSystemAdmin, "houseDirectoryPanel");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DoctorsDirectoryPanel;
     private javax.swing.JPanel EncounterDirectoryPanel;
     private javax.swing.JPanel PatientDirectoryPanel;
+    private javax.swing.JPanel ViewPanelCommunityDirectory;
     private javax.swing.JButton btnAddDoctor;
     private javax.swing.JButton btnAddEncounter;
     private javax.swing.JButton btnAddPatient;
     private javax.swing.JButton btnCityDirectory;
     private javax.swing.JButton btnCreateCity;
+    private javax.swing.JButton btnCreateCommunity;
     private javax.swing.JButton btnCreateHospital;
+    private javax.swing.JButton btnCreateHouse;
     private javax.swing.JButton btnDoctorsDirectory;
     private javax.swing.JButton btnEncountersDirectory;
     private javax.swing.JButton btnHospitlaDirectory;
     private javax.swing.JButton btnPatientDirectory;
     private javax.swing.JButton btnSystemAdminLogin;
     private javax.swing.JButton btnViewCity;
+    private javax.swing.JButton btnViewCommunity;
     private javax.swing.JButton btnViewDoctors;
     private javax.swing.JButton btnViewEncounter;
     private javax.swing.JButton btnViewHospital;
+    private javax.swing.JButton btnViewHouse;
     private javax.swing.JButton btnViewPatient;
     private javax.swing.JPanel cityDirectoryPanel;
+    private javax.swing.JPanel communityDirectoryPanel;
     private javax.swing.JPanel controlPanelCityDirectory;
+    private javax.swing.JPanel controlPanelCommunityDirectroy;
     private javax.swing.JPanel controlPanelDoctorsDirectory;
     private javax.swing.JPanel controlPanelEncountersDirectory;
     private javax.swing.JPanel controlPanelHospitalDirectory;
+    private javax.swing.JPanel controlPanelHouseDirectory;
     private javax.swing.JPanel controlPanelPatientDirectroy;
     private javax.swing.JPanel controlPanelSystemAdmin;
     private javax.swing.JPanel hospitalAdminLoginPanel;
     private javax.swing.JPanel hospitalDirectoryPanel;
+    private javax.swing.JPanel houseDirectoryPanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -706,12 +923,15 @@ public class SystemAdminPanel extends javax.swing.JPanel {
     private javax.swing.JSplitPane jSplitPaneHospitalDirectory;
     private javax.swing.JSplitPane jSplitPanePatientDirectory;
     private javax.swing.JSplitPane splitPaneCityDirectory;
+    private javax.swing.JSplitPane splitPaneCommunityDirectory;
+    private javax.swing.JSplitPane splitPaneHouseDirectory;
     private javax.swing.JPasswordField txtSystemAdminPassword;
     private javax.swing.JTextField txtSystemAdminUsername;
     private javax.swing.JPanel viewPanelCityDirectory;
     private javax.swing.JPanel viewPanelDoctorsDirectory;
     private javax.swing.JPanel viewPanelEncountersDirectory;
     private javax.swing.JPanel viewPanelHospitalDirectory;
+    private javax.swing.JPanel viewPanelHouseDirectory;
     private javax.swing.JPanel viewPanelPatientDirectroy;
     private javax.swing.JPanel viewPanelSystemAdmin;
     // End of variables declaration//GEN-END:variables
