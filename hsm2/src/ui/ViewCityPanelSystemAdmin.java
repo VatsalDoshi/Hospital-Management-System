@@ -316,17 +316,7 @@ public class ViewCityPanelSystemAdmin extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblCities.getModel();
         model.setRowCount(0);
         
-        for (City ct : )
-        EncounterHistory eh = sysAdmin.getEncounterHistory();
-        List<Encounter> el = eh.getEncounterHistory();
-        for(Encounter e : el){
-            Object[] row = new Object[4];
-            row[0] = e;
-            row[1] = e.getDoctor();
-            row[2] = e.getPatient();
-            row[3] = e.getDate();
-            model.addRow(row);
+        
         }
         
    }
-}
