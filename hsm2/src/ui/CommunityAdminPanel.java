@@ -79,6 +79,12 @@ public class CommunityAdminPanel extends javax.swing.JPanel {
 
         lblCommunityAdminPassword.setText("Password");
 
+        txtCommunityAdminUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCommunityAdminUsernameActionPerformed(evt);
+            }
+        });
+
         btnCommunityAdminLogin.setText("Login");
         btnCommunityAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -399,7 +405,7 @@ public class CommunityAdminPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String username = txtCommunityAdminUsername.getText();
         String password = pwdPassword.getText();
-        if(username.equals("cadmin") && password.equals("12345")){
+        if(username.equals("c") && password.equals("c")){
             cardLayoutmain.show(this, "jSplitPaneCommunityAdmin");
         }
         else{
@@ -448,6 +454,10 @@ public class CommunityAdminPanel extends javax.swing.JPanel {
         ViewHousePanel house = new ViewHousePanel(sysAdmin);
         splitPaneHouseDirectory.setRightComponent(house);
     }//GEN-LAST:event_btnViewHouseActionPerformed
+
+    private void txtCommunityAdminUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityAdminUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCommunityAdminUsernameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
