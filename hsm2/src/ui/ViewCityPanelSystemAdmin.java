@@ -317,6 +317,13 @@ public class ViewCityPanelSystemAdmin extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblCities.getModel();
         model.setRowCount(0);
         
+        for(City c : sysAdmin.getCities()){
+            Object[] row = new Object[3];
+            row[0] = c.getId();
+            row[1] = c;
+            row[2] = c.getState();
+            model.addRow(row);
+        }
         
         }
         

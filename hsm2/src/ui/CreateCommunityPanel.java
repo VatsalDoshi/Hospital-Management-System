@@ -56,6 +56,12 @@ public class CreateCommunityPanel extends javax.swing.JPanel {
 
         lblCommunityCity.setText("Community City");
 
+        txtCommunityName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCommunityNameActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,6 +129,10 @@ public class CreateCommunityPanel extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_btnSaveCommunityActionPerformed
+
+    private void txtCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCommunityNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

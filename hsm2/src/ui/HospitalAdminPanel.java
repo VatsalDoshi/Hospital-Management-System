@@ -481,7 +481,7 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
         */
         String username = txtHospitalAdminUsername.getText();
         String password = txtHospitalAdminPassword.getText();
-        if(username.equals("hadmin") && password.equals("12345")){
+        if(username.equals("h") && password.equals("h")){
             cardLayoutmain.show(this, "jSplitPaneHospitalAdmin");
         }
         else{

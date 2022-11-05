@@ -47,6 +47,12 @@ public class CreateCityPanel extends javax.swing.JPanel {
 
         lblCityState.setText("City State");
 
+        txtCityName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCityNameActionPerformed(evt);
+            }
+        });
+
         btnSaveCity.setText("Save City");
         btnSaveCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +118,10 @@ public class CreateCityPanel extends javax.swing.JPanel {
         
         JOptionPane.showMessageDialog(this, "City Info Saved"); 
     }//GEN-LAST:event_btnSaveCityActionPerformed
+
+    private void txtCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCityNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

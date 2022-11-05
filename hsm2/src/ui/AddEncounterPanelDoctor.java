@@ -58,6 +58,12 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
             }
         });
 
+        txtEncounterDate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEncounterDateActionPerformed(evt);
+            }
+        });
+
         jLabel3.setText("Patient");
 
         jLabel4.setText("Date of Encounter");
@@ -133,6 +139,10 @@ public class AddEncounterPanelDoctor extends javax.swing.JPanel {
         
         jComboBoxPatient.setSelectedItem(null);
     }//GEN-LAST:event_btnAddEncounterActionPerformed
+
+    private void txtEncounterDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEncounterDateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEncounterDateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

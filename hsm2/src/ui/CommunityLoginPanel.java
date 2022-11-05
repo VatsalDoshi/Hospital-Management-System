@@ -40,6 +40,12 @@ public class CommunityLoginPanel extends javax.swing.JPanel {
 
         lblCommunityAdminPassword.setText("Password");
 
+        txtCommunityAdminUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCommunityAdminUsernameActionPerformed(evt);
+            }
+        });
+
         btnCommunityAdminLogin.setText("Login");
         btnCommunityAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +99,10 @@ public class CommunityLoginPanel extends javax.swing.JPanel {
             
         }
     }//GEN-LAST:event_btnCommunityAdminLoginActionPerformed
+
+    private void txtCommunityAdminUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityAdminUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCommunityAdminUsernameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

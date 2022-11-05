@@ -741,7 +741,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         */
         String username = txtSystemAdminUsername.getText();
         String password = txtSystemAdminPassword.getText();
-        if(username.equals("sadmin") && password.equals("12345")){
+        if(username.equals("s") && password.equals("s")){
             cardLayoutmain.show(this, "jSplitPaneHospitalAdmin");
         }
         else{

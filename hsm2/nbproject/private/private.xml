@@ -14,6 +14,7 @@
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/CreateHospitalPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/CreateCommunityPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewDoctorPanelSystemAdmin.java</file>
+            <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/model/CommunityAdmin.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/PatientPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/DoctorPanelHome.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/AddEncounterPanelDoctor.java</file>
@@ -24,12 +25,14 @@
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewDoctorPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/CreateDoctorPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/CommunityAdminPanel.java</file>
+            <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewHospitalPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewCityPanelSystemAdmin.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/HomePage.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewCommunityPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/HospitalAdminPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/CreatePatientPanel.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/DoctorPanel.java</file>
+            <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewHospitalPanelSystemAdmin.java</file>
             <file>file:/C:/Users/doshi/OneDrive/Documents/NetBeansProjects/HSM3/src/ui/ViewEncounterPanelDoctor.java</file>
         </group>
     </open-files>
